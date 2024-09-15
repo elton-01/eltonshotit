@@ -89,7 +89,7 @@ DATABASES = {
         "PORT": "6543",
     }
 }
-# postgresql://postgres.bxtduxfeqfrnbmchbehq:[YOUR-PASSWORD]@aws-0-eu-central-1.pooler.supabase.com:6543/postgres
+# postgresql://postgres.bxtduxfeqfrnbmchbehq:[Elton-Shotit_00]@aws-0-eu-central-1.pooler.supabase.com:6543/postgres
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
