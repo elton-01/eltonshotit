@@ -79,18 +79,18 @@ WSGI_APPLICATION = "elton.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres.bxtduxfeqfrnbmchbehq",
-        "PASSWORD": "Elton-Shotit_00",
-        "HOST": "aws-0-eu-central-1.pooler.supabase.com",
-        "PORT": "6543",
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # "default": {
+    #     "ENGINE": "django.db.backends.postgresql",
+    #     "NAME": "postgres",
+    #     "USER": "postgres.bxtduxfeqfrnbmchbehq",
+    #     "PASSWORD": "Elton-Shotit_00",
+    #     "HOST": "aws-0-eu-central-1.pooler.supabase.com",
+    #     "PORT": "6543",
+    # }
 }
 # postgresql://postgres.bxtduxfeqfrnbmchbehq:[Elton-Shotit_00]@aws-0-eu-central-1.pooler.supabase.com:6543/postgres
 
