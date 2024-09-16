@@ -15,11 +15,18 @@ body {
   position: relative;
   background: transparent;
 }
+
+::-webkit-scrollbar{
+  display:none;
+  }
+
+  
 .aut{
   height: 150px;
   width: 150px;
   /* margin-bottom: 20px; */
 }
+
 
 .none{
   /* display: none; */
