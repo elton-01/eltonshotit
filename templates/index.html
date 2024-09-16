@@ -27,13 +27,6 @@
 
   <!-- Template Main CSS File -->
   <link href={% static 'assets/css/style.css' %} rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Personal - v4.10.0
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -45,10 +38,7 @@
       <h1 ><a class="hey" href="index.html">EltonShotIt</a>
         <a href="index.html" class="mr-auto" ><img src={% static 'assets/img/portfolio/im1.png' %} alt="" class="img-fluid aut"></a>
       </h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="mr-auto"><img src={% static 'assets/img/portfolio/im1.png' %} alt="" class="img-fluid aut"></a> -->
-      <!-- <h2>I'm a passionate <span>graphic designer</span> from New York</h2> -->
-       <h2 class="model"><a href="#">Become a model</a></h2>
+       <h2 class="model"><a class="nav-link" href="{% url 'form' %}">Become a model</a></h2>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -59,7 +49,7 @@
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
 
       <div class="social-links">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -216,11 +206,8 @@
               <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
-
         </div>
-
       </div>
-
     </div><!-- End Skills -->
 
     <!-- ======= Interests ======= -->
@@ -569,54 +556,6 @@
         </div>
 
         {% endfor%}
-        {% comment %} <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src={% static 'assets/img/portfolio/im2.JPG' %} class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Name: Sheila Obeng</h4>
-              <h4>Height: 1.3m</h4>
-              <h4>Age: 25yrs</h4>
-              <h4>Nationality: Ghanaian</h4>
-              <div class="portfolio-links">
-                <a href={% static 'assets/img/portfolio/im2.JPG' %} data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src={% static 'assets/img/portfolio/im6.JPG' %} class="img-fluid" alt="">
-            <div class="portfolio-info"> 
-              <h4>Name: Patricia Kwabi</h4>
-              <h4>Height: 1.8m</h4>
-              <h4>Age: 23yrs</h4>
-              <h4>Nationality: Ghanaian</h4>
-              <div class="portfolio-links">
-                <a href={% static 'assets/img/portfolio/im6.JPG' %} data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src={% static 'assets/img/portfolio/im2.JPG' %} class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Name: Betty Frimpong</h4>
-              <h4>Height: 1.1m</h4>
-              <h4>Age: 22yrs</h4>
-              <h4>Nationality: Ghanaian</h4>
-              <div class="portfolio-links">
-                <a href={% static 'assets/img/portfolio/im2.JPG' %} data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>  {% endcomment %}
-
 
       </div>
 

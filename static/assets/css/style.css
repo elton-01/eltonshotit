@@ -33,16 +33,6 @@ body {
   height: 70px;
   width: 70px;
 }
-/* body::before {
-  content: "";
-  position: fixed;
-  background: #040404 url("../img/New.png") top right no-repeat;
-  background-size: cover;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100vh;
-} */
   @keyframes swipeBackground2 {
     0% {
       background:  url("../img/portfolio/im7.PNG") center/cover;
