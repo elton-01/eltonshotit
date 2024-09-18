@@ -105,7 +105,13 @@ body::before {
   }
   .container h1 {
     width: 20%;
-  }}
+    
+  }
+  .model a{
+    max-width: 250px;
+  }
+}
+
 
 .model a{
   border: 2px solid black;
