@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "eltonapp",
+    "storages",
 ]
 
 MIDDLEWARE = [
@@ -128,11 +129,26 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+
 STATIC_URL = "static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-MEDIA_ROOT = os.path.join(BASE_DIR, "static/assets/img/portfolio-admin/")
-MEDIA_URL = '/assets/img/portfolio-admin/'
+
+
+# MEDIA_URL = 'https://bxtduxfeqfrnbmchbehq.supabase.co/storage/v1/object/public/eltonshotit/'
+MEDIA_URL = "media/"
+# MEDIA_ROOT = 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
+# DEFAULT_FILE_STORAGE = 'eltonapp.storage.SupabaseStorage'
+
+# SUPABASE_URL = "https://bxtduxfeqfrnbmchbehq.supabase.co"
+# SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4dGR1eGZlcWZybmJtY2hiZWhxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY0MDg3NTIsImV4cCI6MjA0MTk4NDc1Mn0.ZosYNZVv5XdIYT_jafLohnps_m-GPyxGo2jT7GW2Dg4"
+# SUPABASE_BUCKET = "eltonshotit"  
+
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
