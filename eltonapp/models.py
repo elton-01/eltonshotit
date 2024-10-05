@@ -19,7 +19,24 @@ class Image(models.Model):
         blank=True,
         null=True,
     )
+    name1 = models.CharField(
+        max_length=20,
+        null=True,
+    )
+    age = models.CharField(
+        max_length=20,
+        null=True,
+    )
+    height = models.CharField(
+        max_length=20,
+        null=True,
+    )
+    nationality = models.CharField(
+        max_length=20,
+        null=True,
+    )
     image = models.ImageField(
+        # upload_to='images/',
         null=True,
         blank=True,
     )
