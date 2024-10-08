@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-2m)ewm$6k@@dxrjbm=(_6v8fbo(8-*bsf-h%n_p3qctaz(-ms"
 # SECRET_KEY = "django-insecure-2m)ewm$6k@@dxrjbm=(_6v8fbo(8-%*bsf-h%n_p3qctaz(-ms"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "eltonapp",
-    "storages",
+    # "storages",
+    "cloudinary",
+    "cloudinary_storage",
 ]
 
 MIDDLEWARE = [
@@ -133,19 +135,22 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
-# MEDIA_URL = 'https://bxtduxfeqfrnbmchbehq.supabase.co/storage/v1/object/public/eltonshotit/'
-MEDIA_URL = "media/"
-# MEDIA_ROOT = 'media'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME' : "djswvty1i",
+    'API_KEY' : "783557426691688",
+    'API_SECRET' : "sTFA48XvZxej1b139o51CUee3OU",
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-
-# DEFAULT_FILE_STORAGE = 'eltonapp.storage.SupabaseStorage'
-
-# SUPABASE_URL = "https://bxtduxfeqfrnbmchbehq.supabase.co"
-# SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4dGR1eGZlcWZybmJtY2hiZWhxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY0MDg3NTIsImV4cCI6MjA0MTk4NDc1Mn0.ZosYNZVv5XdIYT_jafLohnps_m-GPyxGo2jT7GW2Dg4"
-# SUPABASE_BUCKET = "eltonshotit"  
 
 
 
