@@ -36,7 +36,7 @@ class Image(models.Model):
         null=True,
     )
     image = models.ImageField(
-        # upload_to='images/',
+        upload_to='media/',
         null=True,
         blank=True,
     )
