@@ -37,10 +37,11 @@ class Image(models.Model):
         null=True,
     )
     image = CloudinaryField(
-        # upload_to='media/',
-        # null=True,
-        # blank=True,
-        "image"
+        folder="media/",  # Specify the folder name here
+        overwrite=True,  # Optional: allows overwriting existing files with the same name
+        resource_type="image",  # Optional: specify resource type (image, raw, video)
+        blank=True,
+        null=True,
     )
 
     @property
