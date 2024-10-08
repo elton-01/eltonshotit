@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from pathlib import Path
 import os
 
@@ -48,7 +51,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -128,7 +131,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# Static files (CS S, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 
@@ -138,20 +141,22 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
+# CLOUDINARY_STORAGE = {
+#     "CLOUD_NAME": "djswvty1i",
+#     "API_KEY": "783557426691688",
+#     "API_SECRET": "sTFA48XvZxej1b139o51CUee3OU",
+# }
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME' : "djswvty1i",
-    'API_KEY' : "783557426691688",
-    'API_SECRET' : "sTFA48XvZxej1b139o51CUee3OU",
-}
+cloudinary.config(
+    cloud_name = "djswvty1i",
+    api_key = "783557426691688",
+    api_secret = "sTFA48XvZxej1b139o51CUee3OU",
+)
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-
-
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 
+# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
 # Default primary key field type
