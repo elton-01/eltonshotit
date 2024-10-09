@@ -15,6 +15,7 @@ import cloudinary.uploader
 import cloudinary.api
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,6 +34,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
+load_dotenv()
 
 # Application definition
 
@@ -44,7 +46,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "eltonapp",
-    # "storages",
     "cloudinary",
     "cloudinary_storage",
 ]
@@ -90,12 +91,12 @@ DATABASES = {
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres.bxtduxfeqfrnbmchbehq",
-        "PASSWORD": "Elton-Shotit_00",
-        "HOST": "aws-0-eu-central-1.pooler.supabase.com",
-        "PORT": "6543",
+        "ENGINE": os.getenv('ENGINE'),
+        "NAME": os.getenv('NAME'),
+        "USER": os.getenv('USER'),
+        "PASSWORD": os.getenv('PASSWORD'),
+        "HOST": os.getenv('HOST'),
+        "PORT": os.getenv('PORT'),
     }
 }
 # postgresql://postgres.bxtduxfeqfrnbmchbehq:[Elton-Shotit_00]@aws-0-eu-central-1.pooler.supabase.com:6543/postgres
@@ -148,9 +149,9 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # }
 
 cloudinary.config(
-    cloud_name = "djswvty1i",
-    api_key = "783557426691688",
-    api_secret = "sTFA48XvZxej1b139o51CUee3OU",
+    cloud_name = os.getenv('cloud_name'),
+    api_key = os.getenv('api_key'),
+    api_secret = os.getenv('api_secret'),
 )
 
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
