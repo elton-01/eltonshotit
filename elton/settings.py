@@ -25,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-2m)ewm$6k@@dxrjbm=(_6v8fbo(8-*bsf-h%n_p3qctaz(-ms"
+SECRET_KEY = os.getenv('SECRET_KEY'),
 
 # SECRET_KEY = "django-insecure-2m)ewm$6k@@dxrjbm=(_6v8fbo(8-%*bsf-h%n_p3qctaz(-ms"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEBUG') == True,
 
 ALLOWED_HOSTS = ["*"]
 
@@ -149,9 +149,9 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # }
 
 cloudinary.config(
-    cloud_name = os.getenv('cloud_name'),
-    api_key = os.getenv('api_key'),
-    api_secret = os.getenv('api_secret'),
+    cloud_name = os.getenv('CLOUD_NAME'),
+    api_key = os.getenv('API_KEY'),
+    api_secret = os.getenv('API_SECRET'),
 )
 
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
