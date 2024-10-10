@@ -47,19 +47,19 @@ body {
 
 @keyframes swipeBackground {
   0% {
-    background:  url("../img/portfolio/im4_1.JPG") center/cover;
+    background:  url("../assets/img/portfolio/im4_1.JPG") center/cover;
   }
   25% {
-    background:  url("../img/portfolio/im2_1.JPG") center/cover;
+    background:  url("../assets/img/portfolio/im2_1.JPG") center/cover;
   }
   50% {
-    background:  url("../img/portfolio/im3_1.jpg") center/cover;
+    background:  url("../assets/img/portfolio/im3_1.jpg") center/cover;
   }
   75% {
-    background:  url("../img/portfolio/im11.JPG") center/cover;
+    background:  url("../assets/img/portfolio/im11.JPG") center/cover;
   }
   100% {
-    background:  url("../img/portfolio/im4_1.JPG" ) center/cover; /* Loops back to the first image */
+    background:  url("../assets/img/portfolio/im4_1.JPG" ) center/cover; /* Loops back to the first image */
   }
 }
 .container h1{
